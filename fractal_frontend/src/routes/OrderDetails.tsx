@@ -332,6 +332,7 @@ export default function OrderDetails() {
                     <div className=" my-3 d-flex justify-content-between">
                         <p>Status</p>
                         <select onChange={(e)=>{updateStatus(parseInt(id), e.target.value)}}>
+                            <option value="Pending" selected disabled>Choose a status</option>
                             <option value="Pending">Pending</option>
                             <option value="Completed">Completed</option>
                             <option value="Rejected">Rejected</option>
