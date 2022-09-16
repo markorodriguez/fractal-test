@@ -13,17 +13,18 @@ import com.fractal.technicaltest.models.ClientPkg.Client;
 
 @RestController
 @CrossOrigin
+@RequestMapping(path = "api/clients")
 public class ClientsController {
     
     @Autowired
     private ClientsDAO clientsDAO;
 
-    @RequestMapping(value = "api/clients/find-one/{id}")
+    @RequestMapping(path = "/find-one/{id}")
     public Client findOneClient(@PathVariable Integer id){
         return clientsDAO.findOneClient(id);
     }
     
-    @RequestMapping(value = "api/clients/find-all")
+    @RequestMapping(path = "/find-all")
     public List<Client> findAllClients(){
         return clientsDAO.findAllClients();
     }
